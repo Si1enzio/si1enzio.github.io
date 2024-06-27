@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-around;
+    align-items: center;
+    z-index: 100;
+    background: linear-gradient(0deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.8) 56%, rgba(255,255,255,0.9) 100%);
+    color: #000;
+    overflow: hidden;
+    z-index: 10;
+  }
+  
+
+
+.logo {
+    font-size: 2em;
+    color: #555;
+    cursor: default;
+}
+.logo span {
+    background: linear-gradient(#91b424, #00916e);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.navigation {
+    margin-left: -10%;
+}
+.navigation a {
+    font-size: 1.1em;
+    text-decoration: none;
+    margin-right: 40px;
+    font-weight: 500;
+    color:#555;
+    transition: .3s;
+}
+.navigation a:hover {
+    background: linear-gradient(#91b424, #00916e);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    max-height: 100vh;
+    scroll-behavior: smooth;
+}
+
+.home,
+.about,
+.blog,
+.portfolio,
+.contact {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 30px 100px;
+    scroll-snap-align: end;
+}
+
+.home {
+    background: 
+    url('assets/background.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+  
+.about {
+    background: 
+    linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+    url('assets/background2.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+  
+.blog {
+    background: 
+    linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+    url('assets/background3.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+  
+.portfolio {
+    background: 
+    linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+    url('assets/background4.jpg');
+    background-size: cover;
+    background-position: center;
+}
+  
+  .contact {
+    background: 
+    linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+    url('assets/background5.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.home h2,
+.about h2,
+.blog h2,
+.portfolio h2,
+.contact h2 {
+    font-size: 3em;
+}
+
+.home h2 span,
+.about h2 span,
+.blog h2 span,
+.portfolio h2 span,
+.contact h2 span {
+    color: #91b424;
+    background: -webkit-linear-gradient(#91b424, #00916e);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.home h4,
+.about h4,
+.blog h4,
+.portfolio h4,
+.contact h4 {
+    font-size: 2em;
+}
+
+.home p,
+.about p,
+.blog p,
+.portfolio p,
+.contact p {
+    padding: 10px 0 40px 0;
+    max-width: 50%;
+}
+
+.light-bg {
+    color: #555;
+}
+
+.dark-bg {
+    color: #fff;
+}
+
+.btn-group a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 40px;
+    background: linear-gradient(#91b424, #00916e);
+    border-radius: 10px;
+    border: 2px solid #91b424;
+    font-weight: 500;
+    transition: .3s;
+}
+.btn-group a:hover:nth-child(1) {
+    color: #91b424;
+    background: transparent;
+}
+.btn-group a:nth-child(2) {
+    color: #91b424;
+    background: transparent;
+    margin-left: 30px;
+    padding: 10px 30px;
+}
+.btn-group a:hover:nth-child(2) {
+    color: #fff;
+    background: linear-gradient(#91b424, #00916e);
+}
+.social-icons {
+    position: absolute;
+    bottom: 50px;
+}
+.social-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: #91b424;
+    border-radius: 50%;
+    margin-right: 22px;
+    text-align: center;
+    line-height: 35px;
+    border: 1px solid #fff;
+    outline: 2px solid #91b424;
+    transition: .3s;
+}
+.social-icons a:hover {
+    transform: translateY(-5px);
+}
+.social-icons a i {
+    color: #fff;
+}
+
+/* Clock & Date */
+.datetime{
+    color: #00916e;
+    background: transparent;
+    font-family: "Segoe UI", sans-serif;
+    width: 250px;
+    padding: 3px 5px;
+    border: 2px solid #91b424;
+    border-radius: 15px;
+  }
+  
+  .datetime:hover{
+    background:  linear-gradient(#91b424, #00916e);
+    color:#fff;
+  }
+  
+  .date{
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+  }
+  
+  .time{
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .time span:not(:last-child){
+    position: relative;
+    margin: 0 6px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+  }
+  
+  .time span:last-child{
+    background: #91b424;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 5px;
+    padding: 0 5px;
+    border-radius: 3px;
+  }
+
+/* Pentru schimbarea culorii link-urilor din meniu */
+
