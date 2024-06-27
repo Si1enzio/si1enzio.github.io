@@ -20,10 +20,8 @@ header {
     color: #000;
     overflow: hidden;
     z-index: 10;
-  }
+}
   
-
-
 .logo {
     font-size: 2em;
     color: #555;
@@ -114,7 +112,7 @@ header {
     background-position: center;
 }
   
-  .contact {
+.contact {
     background: 
     linear-gradient(
         rgba(0, 0, 0, 0.5),
@@ -228,34 +226,34 @@ header {
     border-radius: 15px;
   }
   
-  .datetime:hover{
+.datetime:hover{
     background:  linear-gradient(#91b424, #00916e);
     color:#fff;
-  }
+}
   
-  .date{
+.date{
     font-size: 10px;
     font-weight: 600;
     text-align: center;
     letter-spacing: 3px;
-  }
+}
   
-  .time{
+.time{
     font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
   
-  .time span:not(:last-child){
+.time span:not(:last-child){
     position: relative;
     margin: 0 6px;
     font-weight: 600;
     text-align: center;
     letter-spacing: 3px;
-  }
+}
   
-  .time span:last-child{
+.time span:last-child{
     background: #91b424;
     font-size: 18px;
     font-weight: 600;
@@ -263,7 +261,272 @@ header {
     margin-top: 5px;
     padding: 0 5px;
     border-radius: 3px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .navigation a {
+        margin-right: 20px;
+    }
+    .home, .about, .blog, .portfolio, .contact {
+        padding: 20px 50px;
+    }
+    .home p, .about p, .blog p, .portfolio p, .contact p {
+        max-width: 70%;
+    }
+    .datetime {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+    .navigation {
+        margin-left: 0;
+    }
+    .navigation a {
+        font-size: 1em;
+        margin-right: 10px;
+    }
+    .home, .about, .blog, .portfolio, .contact {
+        padding: 20px;
+        height: 100vh;
+    }
+    .home h2, .about h2, .blog h2, .portfolio h2, .contact h2 {
+        font-size: 2em;
+    }
+    .home h4, .about h4, .blog h4, .portfolio h4, .contact h4 {
+        font-size: 1.5em;
+    }
+    .home p, .about p, .blog p, .portfolio p, .contact p {
+        max-width: 100%;
+    }
+    .btn-group a {
+        padding: 10px 20px;
+        margin: 5px 0;
+    }
+    .btn-group a:nth-child(2) {
+        margin-left: 10px;
+    }
+    .datetime {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5em;
+    }
+    .navigation a {
+        font-size: 0.9em;
+        margin-right: 5px;
+    }
+    .home h2, .about h2, .blog h2, .portfolio h2, .contact h2 {
+        font-size: 1.5em;
+    }
+    .home h4, .about h4, .blog h4, .portfolio h4, .contact h4 {
+        font-size: 1.2em;
+    }
+    .btn-group a {
+        padding: 5px 10px;
+        font-size: 0.9em;
+    }
+    .btn-group a:nth-child(2) {
+        margin-left: 5px;
+        padding: 5px 10px;
+        font-size: 0.9em;
+    }
+    .datetime {
+        display: none;
+    }
+}
+
+/*Cards*/
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    width: 80%;
+    max-width: 400px; 
+    height: 50%;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    padding: 0 36px;
+    perspective: 2500px;
+    margin: 0 50px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px; 
+}
+
+.wrapper {
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    border-radius: 20px;
+}
+
+.card:hover .wrapper {
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.wrapper::before,
+.wrapper::after {
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+    border-radius: 20px;
+}
+
+.wrapper::before {
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(
+        to top,
+        transparent 46%,
+        rgba(12, 13, 19, 0.5) 68%,
+        rgba(12, 13, 19) 97%
+    );
+}
+
+.wrapper::after {
+    bottom: 0;
+    opacity: 1;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 46%,
+        rgba(12, 13, 19, 0.5) 68%,
+        rgba(12, 13, 19) 97%
+    );
+}
+
+.card:hover .wrapper::before,
+.wrapper::after {
+    opacity: 1;
+}
+
+.card:hover .wrapper::after {
+    height: 120px;
+}
+
+.title {
+    width: 100%;
+    transition: transform 0.5s;
+}
+
+.card:hover .title {
+    transform: translate3d(0%, -50px, 100px);
+}
+
+.character {
+    width: 180%;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+}
+
+.card:hover .character {
+    opacity: 1;
+    transform: translate3d(0%, -30%, 100px);
+}
+
+
+/* Modal CSS */
+.modal-window {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.25);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    &:target {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: auto;
+    }
+    & > div {
+      width: 90%;
+      height: 80%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 2em;
+      background: white;
+    }
+    header {
+      font-weight: bold;
+    }
+    h1 {
+      font-size: 150%;
+      margin: 0 0 15px;
+    }
   }
+  
+  .modal-close {
+    color: #aaa;
+    line-height: 50px;
+    font-size: 80%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 70px;
+    text-decoration: none;
+    &:hover {
+      color: black;
+    }
+  }
+  
+  /* Demo Styles */
+   
+  .modal-window {
+    & > div {
+      border-radius: 1rem;
+    }
+    color: #555;
+  }
+  
+  .modal-window div:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
+  
+  small {
+    color: lightgray;
+  }
+  
 
-/* Pentru schimbarea culorii link-urilor din meniu */
-
+  
