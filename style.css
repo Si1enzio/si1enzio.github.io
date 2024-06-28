@@ -540,8 +540,7 @@ header {
 
 /* Calculator */
 #calculator {
-    width: 90%;
-    max-width: 400px;
+    max-width: 300px;
     min-height: 300px;
     margin: 15px auto;
     background-color: #91b424;
