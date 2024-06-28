@@ -541,7 +541,7 @@ header {
 /* Calculator */
 #calculator {
     width: 400px;
-    min-height: 400px;
+    min-height: 300px;
     max-height: 75%;
     min-width: 50%;
     max-width: 300px;
