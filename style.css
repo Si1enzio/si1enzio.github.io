@@ -552,14 +552,14 @@ header {
     grid-row-gap: 2px;
     grid-column-gap: 2px;
     padding: 7px;
-    border: solid #323446 5px;
+    border: solid #00916e 5px;
     border-radius: 30px;
 }
 
 #display {
     grid-column: 1 / 5;
-    background-color: #F3F6F2;
-    color: #323446;
+    background-color: #c7ff44;
+    color: #00916e;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -587,7 +587,7 @@ header {
 }
 
 button {
-    background-color: #323446;
+    background-color: #076e76;
     color: #F3F6F2;
     cursor: pointer;
     font-size: 1.2rem;
