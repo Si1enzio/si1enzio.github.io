@@ -817,6 +817,10 @@ input {
     height: 80vh; 
     width: 100vh;
     margin-top: 20px;
+    position: absolute; /* Permite poziționarea absolută */
+    top: 50%; /* Aliniază pe axa verticală */
+    left: 60%; /* Aliniază pe axa orizontală */
+    transform: translate(-50%, -50%); /* Centrează elementul */
 }
 
 iframe {
