@@ -540,7 +540,7 @@ header {
 /* Calculator */
 #calculator {
     max-width: 300px;
-    min-height: 300px;
+    max-height: 400px;
     margin: 15px auto;
     background-color: #91b424;
     background: linear-gradient(#91b424, #00916e);
@@ -566,7 +566,7 @@ header {
     word-break: break-all;
     padding: 5px;
     border-radius: 20px;
-    height: 100%;
+    height: 90%;
 }
 
 .input-display-css {
@@ -592,7 +592,7 @@ button {
     border: solid 2px #91b424;
     outline: none;
     border-radius: 15px;
-    padding: 5px
+    padding: 5px;
 }
 
 button:hover {
@@ -605,7 +605,7 @@ button:hover {
 }
 
 .operator {
-    font-size: 2rem;
+    font-size: 1.2rem;
 }
 
 #equals {
