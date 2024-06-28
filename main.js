@@ -329,3 +329,55 @@ equalsButton.addEventListener("click", () => {
   hasDecimal = inputDisplay.innerText.includes(".")
   endOfCalculation = true;
 });
+
+// Click Counter
+const clickButton = document.getElementById('clickButton');
+const counterDiv = document.getElementById('counter');
+const resetButton = document.getElementById('resetButton');
+let clickCount = 0;
+
+//aditional la cerintele problemei, am adaugat si un camp langa butonul 'click' unde se va afisa numarul de click-uri
+
+clickButton.addEventListener('click', () => {
+    clickCount++;
+    console.log('Număr de clicuri:', clickCount);
+    counterDiv.textContent = `Număr de clicuri: ${clickCount}`;
+});
+
+//aditional la cerintele problemei, am adaugat si un buton pentru reset
+
+resetButton.addEventListener('click', () => {
+    clickCount = 0;
+    console.log('Contor resetat');
+    counterDiv.textContent = `Număr de clicuri: ${clickCount}`;
+});
+
+
+let isGreen = false;
+let isClick = false;
+let counterText = false;
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'q') {
+        if (isGreen) {
+            clickButton.style.backgroundColor = '#ff3333';
+        } else {
+            clickButton.style.backgroundColor = 'green';
+        }
+        isGreen = !isGreen;
+    } else if (event.key === 'w') {
+        if (isClick) {
+            clickButton.textContent = 'Click';
+        } else {
+            clickButton.textContent = 'Apasă';
+        }
+        isClick = !isClick;            
+    } else if (event.key === 'e') {
+        if (counterText) {
+            counterDiv.textContent = `Număr de clicuri: ${clickCount}`;
+        } else {
+            counterDiv.textContent = `Câte ori ai dat click: ${clickCount}`;
+        }
+        counterText = !counterText; 
+    } 
+});

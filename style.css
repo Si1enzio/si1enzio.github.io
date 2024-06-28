@@ -722,3 +722,57 @@ button:hover {
         font-size: 1.4rem;
     }
 }
+
+/* Click Counter */
+.click-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: bisque;
+    margin: 0 auto;
+    padding: 10px 30px;
+    max-width: 600px;
+    border-radius: 20px;
+    justify-content: center;
+    margin-top: 20%;
+}
+
+.click-button, #counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+.click-button {
+    background-color: #ff3333;
+    color: white;
+}
+
+.click-button:hover {
+    background-color: orange;
+}
+
+#counter {
+    background-color: #33beff;
+    color: white;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .click-button, #counter {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .click-button, #counter {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+}
