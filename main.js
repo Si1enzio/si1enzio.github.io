@@ -233,7 +233,6 @@ function calculate() {
 
 function convertInfixToPostfix(stringToConvert) {
 
-  // applying shunting-yard algorithm
   let operatorStack = [];
   let postFixQueue = [];
 
@@ -254,12 +253,10 @@ function convertInfixToPostfix(stringToConvert) {
         operatorPrecedence[operatorStack[operatorStack.length - 1]];
     }
 
-    // if token is a number
     if (!checkForOperatorSymbol(token)) {
       postFixQueue.push(token);
     }
 
-    // if token is an operator and operator stack is empty or token precedence > top of stack precedence
     else if (
       checkForOperatorSymbol(token) &&
       (operatorStack.length === 0 || tokenPrecedence > topOfStackPrecedence)
@@ -267,7 +264,6 @@ function convertInfixToPostfix(stringToConvert) {
       operatorStack.push(token);
     }
 
-    // if the operator in stack is of higher precedance than the token then you have to pop that operator first
     else {
       while (tokenPrecedence <= topOfStackPrecedence) {
         postFixQueue.push(operatorStack.pop());
@@ -281,7 +277,6 @@ function convertInfixToPostfix(stringToConvert) {
     }
   });
 
-  // if there are still operators left in stack then pop them off and add to postFixQueue
   while (operatorStack.length > 0) {
     postFixQueue.push(operatorStack.pop());
   }
@@ -294,11 +289,8 @@ function postFixEvaluator(postFixQueue) {
 
   postFixQueue.map((token) => {
     if (!checkForOperatorSymbol(token)) {
-      // convert numbers with Neg to real negative numbers
-      //   then push token converted to a number
       resultStack.push(+token.replace(/(.+)Neg/, "-$1"));
     } else {
-      //   if operator then we pop off numbers in resultStack and operate on them
       const RHS = resultStack.pop();
       const LHS = resultStack.pop();
 
@@ -336,15 +328,11 @@ const counterDiv = document.getElementById('counter');
 const resetButton = document.getElementById('resetButton');
 let clickCount = 0;
 
-//aditional la cerintele problemei, am adaugat si un camp langa butonul 'click' unde se va afisa numarul de click-uri
-
 clickButton.addEventListener('click', () => {
     clickCount++;
     console.log('Număr de clicuri:', clickCount);
     counterDiv.textContent = `Număr de clicuri: ${clickCount}`;
 });
-
-//aditional la cerintele problemei, am adaugat si un buton pentru reset
 
 resetButton.addEventListener('click', () => {
     clickCount = 0;
@@ -406,3 +394,80 @@ form.addEventListener('submit', (event) => {
         alert('Formularul a fost completat corect!');
     }
 });
+
+// Weather App
+
+const api = {
+  key: "0a21dc4343e41ba08bf85fc8726b36f9",
+  base: "https://api.openweathermap.org/data/2.5/",
+};
+
+const searchBox = document.querySelector(".search-box");
+searchBox.addEventListener("keypress", setQuery);
+
+function setQuery(evt) {
+  if (evt.keyCode == 13) {
+    getResults(searchBox.value);
+  }
+}
+
+function getResults(query) {
+  fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+    .then((weather) => {
+      return weather.json();
+    })
+    .then(displayResults);
+}
+
+function displayResults(weather) {
+  let city = document.querySelector(".location .city");
+  city.innerHTML = `${weather.name}, ${weather.sys.country}`;
+
+  let now = new Date();
+  let date = document.querySelector(".location .date");
+  date.innerHTML = dateBuiler(now);
+
+  let temp = document.querySelector(".current .temp");
+  temp.innerHTML = `${Math.round(weather.main.temp)}<span>°c</span>`;
+
+  let weather_el = document.querySelector(".current .wether");
+  weather_el.innerText = weather.weather[0].main;
+
+  let hilow = document.querySelector(".hi-low");
+  hilow.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(
+    weather.main.temp_max
+  )}°c`;
+}
+
+function dateBuiler(d) {
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let day = days[d.getDay()];
+  let date = d.getDate();
+  let month = months[d.getMonth()];
+  let year = d.getFullYear();
+
+  return `${day} ${date} ${month} ${year}`;
+}

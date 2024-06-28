@@ -185,8 +185,6 @@
         <div>
             <h2><span>Quotes</span></h2>
             <h4>Text Effects</h4>
-            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse totam provident voluptas similique.
-                Impedit incidunt atque recusandae rem quam.</p> -->
          </div>
          <div class="iframe-container">
             <iframe src="/quotes.html" frameborder="0"></iframe>
@@ -195,14 +193,31 @@
 
     <section class="app dark-bg"  id="app">
         <div>
-            <h2 class="cursor-scale">Hi, I'm <span>Joe Greyson</span></h2>
-            <h4 class="cursor-scale small">Frontend Developer</h4>
-            <p class="cursor-scale small">Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse totam provident voluptas similique.
-                Impedit incidunt atque recusandae rem quam.</p>
-            <div class="btn-group  cursor-scale small">
-                <a href="#">Hire Me</a>
-                <a href="#">See Projects</a>
-            </div>
+            <h2>Weather <span>App</span></h2>
+            <h4>CSS & Javascript</h4>
+
+            <div class="app-wrap">
+                <header>
+                  <input
+                    type="text"
+                    autocomplete="off"
+                    class="search-box"
+                    placeholder="Search a city"
+                  />
+                </header>
+                <main>
+                  <section class="location">
+                    <div class="city">Chisinau, MD</div>
+                    <div class="date">Friday 28 June 2024</div>
+                  </section>
+                  <div class="current">
+                    <div class="temp">28<span>°c</span></div>
+                    <div class="wether">Clear sky</div>
+                    <div class="hi-low">16°c / 31°c</div>
+                  </div>
+                </main>
+              </div>
+ 
         </div>
     </section>
 
@@ -235,12 +250,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
     <script src="main.js"></script>
-    <script>
-        var loader = document.getElementById("preloader");
-        window.addEventListener("load", function(){
-            loader.style.display = "none";
-        })
-    </script>
 
 </body>
 </html>

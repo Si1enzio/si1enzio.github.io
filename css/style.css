@@ -152,7 +152,6 @@ header {
 
 .home p,
 .modals p,
-.app p,
 .txtfx p {
     padding: 10px 0 40px 0;
     max-width: 50%;
@@ -266,7 +265,6 @@ header {
     border-radius: 3px;
 }
 
-/* Responsive Styles */
 @media (max-width: 1200px) {
     .navigation a {
         margin-right: 20px;
@@ -519,8 +517,6 @@ header {
     }
   }
   
-  /* Demo Styles */
-   
   .modal-window {
     & > div {
       border-radius: 1rem;
@@ -672,7 +668,6 @@ button:hover {
     border-color: #7E53E1;
 }
 
-/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     #calculator {
         width: 100%;
@@ -763,7 +758,6 @@ button:hover {
     color: white;
 }
 
-/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     .click-button, #counter {
         flex: 1 1 calc(50% - 20px);
@@ -820,7 +814,7 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh; /* Use full viewport height */
+    height: 80vh; 
     width: 100vh;
     margin-top: 20px;
 }
@@ -835,14 +829,14 @@ iframe {
 /* Contact card */
 
 .c-card {
-    position: absolute; /* Permite poziționarea absolută */
-    top: 50%; /* Aliniază .c-card pe axa verticală */
-    left: 60%; /* Aliniază .c-card pe axa orizontală */
-    transform: translate(-50%, -50%); /* Centrează .c-card */
+    position: absolute; 
+    top: 50%; 
+    left: 60%; 
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
-    align-items: center; /* Aliniază conținutul pe mijloc pe axa orizontală */
-    text-align: center; /* Aliniază textul centrulat */
+    align-items: center; 
+    text-align: center; 
     width: 385px;
     height: 512px;
     border-radius: 20px;
@@ -854,21 +848,18 @@ iframe {
     animation: gradient-animation 18s ease infinite;
 }
 
-/* .c-card p {
-    max-width: 90%;
-}   */
 .card-image {
-    width: 29%; /* Lățimea imaginii */
-    height: auto; /* Înălțimea se adaptează automat proporțional */
+    width: 29%; 
+    height: auto; 
     border-radius: 50%;
 }
 
 .card-content {
-    flex: 1; /* Ocupă spațiul disponibil pe axa verticală */
+    flex: 1; 
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Aliniază conținutul pe mijloc pe axa verticală */
-    align-items: center; /* Aliniază conținutul pe mijloc pe axa orizontală */
+    justify-content: center; 
+    align-items: center; 
     padding: 10px;
 }
 
@@ -919,7 +910,6 @@ iframe {
     text-transform: uppercase;
 }
 
-/* Add focus state if needed */
 .c-btn:focus {
     outline: none; 
     background-image: radial-gradient(circle, #3cb53c, #5cc837, #7cdb2e, #9ded20, #bfff00);
@@ -927,4 +917,94 @@ iframe {
     color: hsl(0, 0%, 20%);
     transition: all .4s ease-in-out;
     text-transform: uppercase;
+}
+
+/* Weather App */
+
+
+.app-wrap {
+    position: absolute; /* Permite poziționarea absolută */
+    top: 50%; /* Aliniază pe axa verticală */
+    left: 60%; /* Aliniază pe axa orizontală */
+    transform: translate(-50%, -50%); /* Centrează elementul */
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.6)
+    );
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px 50px;
+}
+
+.location .city {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.location .date {
+    color: #fff;
+    font-size: 16px;
+}
+
+.current .temp {
+    color: #fff;
+    font-size: 102px;
+    font-weight: 900;
+    margin: 30px 0;
+    text-shadow: 2px 10px rgba(0, 0, 0, 0.75);
+}
+
+.current .temp span {
+    font-weight: 500;
+}
+
+.current .weather {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 15px;
+    text-shadow: 0 3px rgba(0, 0, 0, 0.4);
+}
+
+.current .hi-low {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    text-shadow: 0 4px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+    .app-wrap {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .current .temp {
+        font-size: 72px;
+    }
+
+    .current .weather {
+        font-size: 24px;
+    }
+
+    .current .hi-low {
+        font-size: 20px;
+    }
 }
