@@ -381,3 +381,28 @@ document.addEventListener('keydown', (event) => {
         counterText = !counterText; 
     } 
 });
+
+
+// Form error submission
+
+const form = document.getElementById('myForm');
+const errorMessage = document.getElementById('errorMessage');
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    
+    errorMessage.textContent = '';
+
+    const field1 = document.getElementById('field1').value.trim();
+    const field2 = document.getElementById('field2').value.trim();
+    const field3 = document.getElementById('field3').value.trim();
+    const field4 = document.getElementById('field4').value.trim();
+    const field5 = document.getElementById('field5').value.trim();
+
+    if (!field1 || !field2 || !field3 || !field4 || !field5) {
+        errorMessage.textContent = 'Toate câmpurile trebuie completate.';
+    } else {
+        form.submit();
+        alert('Formularul a fost completat corect!');
+    }
+});

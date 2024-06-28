@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Project</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body onload="initClock()">
     <header>
@@ -65,28 +65,28 @@
             <a href="#open-modal-1">
                 <div class="card">
                     <div class="wrapper">
-                        <img src="assets/card-1.jpg" class="cover-image" />
+                        <img src="/assets/card-1.jpg" class="cover-image" />
                     </div>
-                    <img src="assets/modal-title-1.png" class="title" />
-                    <img src="assets/card-character-1.png" class="character" />
+                    <img src="/assets/modal-title-1.png" class="title" />
+                    <img src="/assets/card-character-1.png" class="character" />
                 </div>
             </a>
             <a href="#open-modal-2">
                 <div class="card">
                     <div class="wrapper">
-                        <img src="assets/card-2.jpg" class="cover-image" />
+                        <img src="/assets/card-2.jpg" class="cover-image" />
                     </div>
-                    <img src="assets/modal-title-1.png" class="title" />
-                    <img src="assets/card-character-1.png" class="character" />
+                    <img src="/assets/modal-title-1.png" class="title" />
+                    <img src="/assets/card-character-1.png" class="character" />
                 </div>
             </a>
             <a href="#open-modal-3">
                 <div class="card">
                     <div class="wrapper">
-                        <img src="assets/card-3.jpg" class="cover-image" />
+                        <img src="/assets/card-3.jpg" class="cover-image" />
                     </div>
-                    <img src="assets/modal-title-1.png" class="title" />
-                    <img src="assets/card-character-1.png" class="character" />
+                    <img src="/assets/modal-title-1.png" class="title" />
+                    <img src="/assets/card-character-1.png" class="character" />
                 </div>
             </a>
         </div>
@@ -140,6 +140,7 @@
               <div class="content">
                 <h2><span>Click Counter</span></h2>
                 <h4>Using Javascript</h4>
+                </div>
                 <div class="click-container">
                     <span id="clickButton" class="click-button">Click</span>
                     <div id="counter">Număr de clicuri: 0</div> 
@@ -147,33 +148,49 @@
                 </div>
             </div>
         </div>
-
+        
         <div id="open-modal-3" class="modal-window">
             <div>
               <a href="#" title="Close" class="modal-close">Close</a>
-              <h1>Voilà!</h1>
-              <div>A CSS-only modal based on the :target pseudo-class. Hope you find it helpful.</div>
-              <br>
-              <div><small>Check out 👇</small></div>
-              <a href="https://chromewebstore.google.com/detail/pkgejkfioihnchalojepdkefnpejomgn" target="_blank">
-                    
-                Your new favorite eyedropper tool!</a>
+              <div class="content">
+                <h2><span>Form</span></h2>
+                <h4>Error Submit</h4>
+                </div>
+                <div class="form-container">
+                    <form id="myForm">
+                        <label for="field1">Field 1:</label>
+                        <input type="text" id="field1" name="field1">
+                
+                        <label for="field2">Field 2:</label>
+                        <input type="text" id="field2" name="field2">
+                
+                        <label for="field3">Field 3:</label>
+                        <input type="text" id="field3" name="field3">
+                
+                        <label for="field4">Field 4:</label>
+                        <input type="text" id="field4" name="field4">
+                
+                        <label for="field5">Field 5:</label>
+                        <input type="text" id="field5" name="field5">
+                
+                        <button type="submit">Submit</button>
+                    </form>
+                    <div id="errorMessage"></div>       
+                </div>
             </div>
         </div>
-
     </section>
 
     <section class="portfolio dark-bg"  id="portfolio">
         <div>
-            <h2 class="cursor-scale">Hi, I'm <span>Joe Greyson</span></h2>
-            <h4 class="cursor-scale small">Frontend Developer</h4>
-            <p class="cursor-scale small">Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse totam provident voluptas similique.
-                Impedit incidunt atque recusandae rem quam.</p>
-            <div class="btn-group  cursor-scale small">
-                <a href="#">Hire Me</a>
-                <a href="#">See Projects</a>
-            </div>
+            <h2><span>Quotes</span></h2>
+            <h4>Text Effects</h4>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse totam provident voluptas similique.
+                Impedit incidunt atque recusandae rem quam.</p> -->
          </div>
+         <div class="iframe-container">
+            <iframe src="/quotes.html" frameborder="0"></iframe>
+        </div>
     </section>
 
     <section class="blog dark-bg"  id="blog">
