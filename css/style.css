@@ -360,12 +360,13 @@ header {
     max-width: 400px; 
     height: 50%;
     display: flex;
-    /* justify-content: center; */
-    align-items: center;
+    justify-content: center;
+    align-items: flex-end;
     position: relative;
     padding: 0 36px;
     perspective: 2500px;
     margin: 0 50px; 
+    margin-top: 200px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
 }
