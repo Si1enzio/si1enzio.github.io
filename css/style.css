@@ -153,8 +153,7 @@ header {
 .home p,
 .modals p,
 .app p,
-.txtfx p,
-.contact p {
+.txtfx p {
     padding: 10px 0 40px 0;
     max-width: 50%;
 }
@@ -845,7 +844,7 @@ iframe {
     align-items: center; /* Aliniază conținutul pe mijloc pe axa orizontală */
     text-align: center; /* Aliniază textul centrulat */
     width: 385px;
-    height: 612px;
+    height: 512px;
     border-radius: 20px;
     overflow: hidden;
     padding: 10px;
@@ -855,6 +854,9 @@ iframe {
     animation: gradient-animation 18s ease infinite;
 }
 
+/* .c-card p {
+    max-width: 90%;
+}   */
 .card-image {
     width: 29%; /* Lățimea imaginii */
     height: auto; /* Înălțimea se adaptează automat proporțional */
@@ -867,6 +869,7 @@ iframe {
     flex-direction: column;
     justify-content: center; /* Aliniază conținutul pe mijloc pe axa verticală */
     align-items: center; /* Aliniază conținutul pe mijloc pe axa orizontală */
+    padding: 10px;
 }
 
 .card-content h1 {
@@ -886,6 +889,7 @@ iframe {
     color: white;
     font-size: 1em;
     font-weight: 400;
+    max-width: 100%;
 }
 
 .c-btn {
