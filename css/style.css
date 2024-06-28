@@ -823,6 +823,7 @@ input {
     align-items: center;
     height: 80vh; /* Use full viewport height */
     width: 100vh;
+    margin-top: 20px;
 }
 
 iframe {
