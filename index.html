@@ -10,7 +10,7 @@
 </head>
 <body onload="initClock()">
     <header>
-        <h2 class="logo cursor-scale"><span>S</span>i1enzio.</h2>
+        <h2 class="logo cursor-scale"><span>P</span>roject.</h2>
         <nav class="navigation cursor-scale small">
             <a href="#home">Home</a>
             <a href="#about">About</a>
@@ -57,12 +57,12 @@
     <section class="about dark-bg"  id="about">
         <div class="content">
             <h2 class="cursor-scale">CSS <span>Modals</span></h2>
-            <h4 class="cursor-scale small">Welcome to my project</h4>
+            <h4 class="cursor-scale small">Dialog box/popup window</h4>
             <p class="cursor-scale small">Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse totam provident voluptas similique.
                 Impedit incidunt atque recusandae rem quam.</p>
         </div>
         <div class="card-container">
-            <a href="#open-modal">
+            <a href="#open-modal-1">
                 <div class="card">
                     <div class="wrapper">
                         <img src="assets/card-1.jpg" class="cover-image" />
@@ -71,7 +71,7 @@
                     <img src="assets/card-character-1.png" class="character" />
                 </div>
             </a>
-            <a href="#open-modal">
+            <a href="#open-modal-2">
                 <div class="card">
                     <div class="wrapper">
                         <img src="assets/card-2.jpg" class="cover-image" />
@@ -80,7 +80,7 @@
                     <img src="assets/card-character-1.png" class="character" />
                 </div>
             </a>
-            <a href="#open-modal">
+            <a href="#open-modal-3">
                 <div class="card">
                     <div class="wrapper">
                         <img src="assets/card-3.jpg" class="cover-image" />
@@ -91,7 +91,50 @@
             </a>
         </div>
         
-        <div id="open-modal" class="modal-window">
+        <div id="open-modal-1" class="modal-window">
+            <div>
+                <a href="#" title="Close" class="modal-close">Close</a>
+                <div class="content">
+                <h2><span>Calculator</span></h2>
+                <h4>Using Grid Layout</h4>
+                </div>
+
+                <section  id="calculator">
+
+                    <div id="display">
+                        <div id=output-display class="output-display-css">0</div>
+                        <div id=input-display class="input-display-css">0</div>
+                    </div>
+            
+                    <button id="clear">AC</button>
+                    <button id="delete">DEL</button>
+                    <button class="operator-button operator" id="divide" >÷</button>
+                    <button class="number-button" id="seven">7</button>
+                    
+                    <button class="number-button" id="eight">8</button>
+                    <button class="number-button" id="nine">9</button>
+                    <button class="operator-button operator" id="multiply" >×</button>
+                    
+                    <button class="number-button" id="four">4</button>
+                    <button class="number-button" id="five">5</button>
+                    <button class="number-button" id="six">6</button>
+                    <button class="operator-button operator" id="add">+</button>
+                    
+                    <button class="number-button" id="one">1</button>
+                    <button class="number-button" id="two">2</button>
+                    <button class="number-button" id="three">3</button>
+                    <button class="operator-button operator" id="subtract">−</button>
+                    <button class="number-button" id="zero">0</button>  
+                                
+                    <button id="equals" class="operator">=</button>
+                    <button class="number-button" id="decimal">.</button>
+                    
+                </section>  
+
+            </div>
+        </div>
+
+        <div id="open-modal-2" class="modal-window">
             <div>
               <a href="#" title="Close" class="modal-close">Close</a>
               <h1>Voilà!</h1>
@@ -102,6 +145,20 @@
                     
                 Your new favorite eyedropper tool!</a>
             </div>
+        </div>
+
+        <div id="open-modal-3" class="modal-window">
+            <div>
+              <a href="#" title="Close" class="modal-close">Close</a>
+              <h1>Voilà!</h1>
+              <div>A CSS-only modal based on the :target pseudo-class. Hope you find it helpful.</div>
+              <br>
+              <div><small>Check out 👇</small></div>
+              <a href="https://chromewebstore.google.com/detail/pkgejkfioihnchalojepdkefnpejomgn" target="_blank">
+                    
+                Your new favorite eyedropper tool!</a>
+            </div>
+        </div>
 
     </section>
 
