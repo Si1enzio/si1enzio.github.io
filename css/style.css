@@ -59,9 +59,9 @@ header {
 }
 
 .home,
-.about,
-.blog,
-.portfolio,
+.modals,
+.app,
+.txtfx,
 .contact {
     position: relative;
     width: 100%;
@@ -79,7 +79,7 @@ header {
     background-position: center;
 }
   
-.about {
+.modals {
     background: 
     linear-gradient(
         rgba(0, 0, 0, 0.5),
@@ -90,7 +90,7 @@ header {
     background-position: center;
 }
   
-.blog {
+.app {
     background: 
     linear-gradient(
         rgba(0, 0, 0, 0.5),
@@ -101,7 +101,7 @@ header {
     background-position: center;
 }
   
-.portfolio {
+.txtfx {
     background: 
     linear-gradient(
         rgba(0, 0, 0, 0.5),
@@ -124,17 +124,17 @@ header {
 }
 
 .home h2,
-.about h2,
-.blog h2,
-.portfolio h2,
+.modals h2,
+.app h2,
+.txtfx h2,
 .contact h2 {
     font-size: 3em;
 }
 
 .home h2 span,
-.about h2 span,
-.blog h2 span,
-.portfolio h2 span,
+.modals h2 span,
+.app h2 span,
+.txtfx h2 span,
 .contact h2 span {
     color: #91b424;
     background: -webkit-linear-gradient(#91b424, #00916e);
@@ -143,17 +143,17 @@ header {
 }
 
 .home h4,
-.about h4,
-.blog h4,
-.portfolio h4,
+.modals h4,
+.app h4,
+.txtfx h4,
 .contact h4 {
     font-size: 2em;
 }
 
 .home p,
-.about p,
-.blog p,
-.portfolio p,
+.modals p,
+.app p,
+.txtfx p,
 .contact p {
     padding: 10px 0 40px 0;
     max-width: 50%;
@@ -272,10 +272,10 @@ header {
     .navigation a {
         margin-right: 20px;
     }
-    .home, .about, .blog, .portfolio, .contact {
+    .home, .modals, .app, .txtfx, .contact {
         padding: 20px 50px;
     }
-    .home p, .about p, .blog p, .portfolio p, .contact p {
+    .home p, .modals p, .app p, .txtfx p, .contact p {
         max-width: 70%;
     }
     .datetime {
@@ -295,17 +295,17 @@ header {
         font-size: 1em;
         margin-right: 10px;
     }
-    .home, .about, .blog, .portfolio, .contact {
+    .home, .modals, .app, .txtfx, .contact {
         padding: 20px;
         height: 100vh;
     }
-    .home h2, .about h2, .blog h2, .portfolio h2, .contact h2 {
+    .home h2, .modals h2, .app h2, .txtfx h2, .contact h2 {
         font-size: 2em;
     }
-    .home h4, .about h4, .blog h4, .portfolio h4, .contact h4 {
+    .home h4, .modals h4, .app h4, .txtfx h4, .contact h4 {
         font-size: 1.5em;
     }
-    .home p, .about p, .blog p, .portfolio p, .contact p {
+    .home p, .modals p, .app p, .txtfx p, .contact p {
         max-width: 100%;
     }
     .btn-group a {
@@ -328,10 +328,10 @@ header {
         font-size: 0.9em;
         margin-right: 5px;
     }
-    .home h2, .about h2, .blog h2, .portfolio h2, .contact h2 {
+    .home h2, .modals h2, .app h2, .txtfx h2, .contact h2 {
         font-size: 1.5em;
     }
-    .home h4, .about h4, .blog h4, .portfolio h4, .contact h4 {
+    .home h4, .modals h4, .app h4, .txtfx h4, .contact h4 {
         font-size: 1.2em;
     }
     .btn-group a {
@@ -831,4 +831,96 @@ iframe {
     height: 100%; 
     border: none; 
     overflow: hidden;
+}
+
+/* Contact card */
+
+.c-card {
+    position: absolute; /* Permite poziționarea absolută */
+    top: 50%; /* Aliniază .c-card pe axa verticală */
+    left: 60%; /* Aliniază .c-card pe axa orizontală */
+    transform: translate(-50%, -50%); /* Centrează .c-card */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Aliniază conținutul pe mijloc pe axa orizontală */
+    text-align: center; /* Aliniază textul centrulat */
+    width: 385px;
+    height: 612px;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 10px;
+    background-image: linear-gradient(to left top, #2a6639, #0d5d46, #03524d, #16474b, #253b42, #213d45, #1d3e48, #17404b, #005056, #005f53, #006c43, #187824);    
+    flex-direction: column;
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+}
+
+.card-image {
+    width: 29%; /* Lățimea imaginii */
+    height: auto; /* Înălțimea se adaptează automat proporțional */
+    border-radius: 50%;
+}
+
+.card-content {
+    flex: 1; /* Ocupă spațiul disponibil pe axa verticală */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Aliniază conținutul pe mijloc pe axa verticală */
+    align-items: center; /* Aliniază conținutul pe mijloc pe axa orizontală */
+}
+
+.card-content h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.card-content h2 {
+    font-size: 1em;
+    font-weight: 600;
+    color: hsl(75, 94%, 57%);
+}
+
+.card-content p {
+    color: white;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.c-btn {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    transition: all .4s ease-in-out;
+    border-radius: 20px;
+    padding: 1.1em;
+    margin-bottom: 0.5em;
+    background-image: linear-gradient(to left top, #2e122d, #2d1735, #2a1c3d, #252145, #1d264c, #102849, #042945, #00293f, #00242e, #051d1e, #091612, #090b09);
+    background-size: 300% 100%;
+}
+
+.c-btn:hover {
+    background-image: radial-gradient(circle, #3cb53c, #5cc837, #7cdb2e, #9ded20, #bfff00);
+    cursor: pointer;
+    color: hsl(0, 0%, 20%);
+    background-position: 100% 0;
+    transition: all .4s ease-in-out;
+    text-transform: uppercase;
+}
+
+/* Add focus state if needed */
+.c-btn:focus {
+    outline: none; 
+    background-image: radial-gradient(circle, #3cb53c, #5cc837, #7cdb2e, #9ded20, #bfff00);
+    cursor: pointer;
+    color: hsl(0, 0%, 20%);
+    transition: all .4s ease-in-out;
+    text-transform: uppercase;
 }
